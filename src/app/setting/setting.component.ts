@@ -10,16 +10,18 @@ import { PttypeService } from "../pttype.service";
   styleUrls: ['./setting.component.css']
 })
 export class SettingComponent implements OnInit {
-  pttypes: Pttype[];
+ public Pttypes : Pttype[] ;
+  public mraData: Array<{ pttype: string, name: string, debt_name: string}> = [];
   constructor(  private pttypeservice:PttypeService ,
     private router: Router) { }
 
-    getHeroes(): void {
-      this.pttypeservice
-          .getpttype
-          .then(pttypes[] => this.data = pttypes);
+    getPttype(): void {
+      this.pttypeservice.getpttype().then( Pttypes => this.Pttypes= Pttypes)
+         console.log(this.Pttypes)
     }
-  ngOnInit() {
+  ngOnInit():void {
+    this.getPttype();
+    console.log(this.mraData) ;
   }
 
 }

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule }    from '@angular/http';
 
 
 
@@ -15,6 +16,10 @@ import { PttypeService } from "./pttype.service";
 import { PttypeComponent } from './pttype/pttype.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,HttpModule,AppRoutingModule
+    
+  ],
   declarations: [
     AppComponent,
     MainComponent,
@@ -22,10 +27,7 @@ import { PttypeComponent } from './pttype/pttype.component';
     SettingComponent,
     PttypeComponent,
   ],
-  imports: [
-    BrowserModule,AppRoutingModule
-    
-  ],
+ 
   providers: [PttypeService],
   bootstrap: [AppComponent],
   
