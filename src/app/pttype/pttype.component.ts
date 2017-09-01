@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
+import {HttpClient} from '@angular/common/http';
+interface ItemsResponse {
+  results: string[];
+}
 @Component({
   selector: 'app-pttype',
   templateUrl: './pttype.component.html',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PttypeComponent implements OnInit {
 
-  constructor() { }
+ public rs: string[];
+  constructor(private http: HttpClient) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    // Make the HTTP request:
+    this.http.get<ItemsResponse>('http://118.175.76.244/api/pttype.php').subscribe(data => {
+      // Read the result field from the JSON response.
+      //console.log(data.results)
+      this.rs = data.results;
+      
+    });
+   
   }
 
 }
+
+

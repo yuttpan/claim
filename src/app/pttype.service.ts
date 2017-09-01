@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, Http,Response  } from '@angular/http';
 
-import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
 import { Pttype } from "./model/pttype";
 
 @Injectable()
@@ -9,13 +9,9 @@ export class PttypeService {
   private headers = new Headers({'Content-Type': 'application/json'});
   private apiUrl = 'http://118.175.76.244/api/pttype.php';  // URL to web api
   constructor(private http: Http) { }
-  getpttype(): Promise<Pttype[]> {
-    return this.http.get(this.apiUrl)
-               .toPromise()
-               .then(response => response.json().data as Pttype[] 
-              )
-               .catch(this.handleError);
-               
+  getpttype() {
+    return this.http.get(`http://118.175.76.244/api/pttype.php`)
+    .map((res:Response) => res.json());
   }
   
   

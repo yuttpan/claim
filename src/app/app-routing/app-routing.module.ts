@@ -7,6 +7,7 @@ import { AppComponent } from "../app.component";
 import { MainComponent } from "../main/main.component";
 import { EclaimComponent } from "../eclaim/eclaim.component";
 import { SettingComponent } from "../setting/setting.component";
+import { PttypeComponent } from "../pttype/pttype.component";
 
 //import { Routes, RouterModule } from '@angular/router'
 
