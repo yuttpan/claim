@@ -16,6 +16,7 @@ import { PttypeService } from "./pttype.service";
 import { PttypeComponent } from './pttype/pttype.component';
 import { DebtServiceService } from "./debt-service.service";
 import { DebtComponent } from './debt/debt.component';
+import { DebtdetailComponent } from './debtdetail/debtdetail.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { DebtComponent } from './debt/debt.component';
     SettingComponent,
     PttypeComponent,
     DebtComponent,
+    DebtdetailComponent,
   ],
  
   providers: [PttypeService,DebtServiceService],

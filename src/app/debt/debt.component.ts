@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { DebtServiceService } from "../debt-service.service";
 import { Item } from "../model/item";
 
@@ -10,7 +10,9 @@ import { Item } from "../model/item";
 })
 export class DebtComponent implements OnInit {
 items : Item[];
-  constructor(public DebtServiceService: DebtServiceService) { }
+selectedItem: Item[];
+  constructor(public DebtServiceService: DebtServiceService,
+              private router: Router) { }
 
   ngOnInit() {
     this.getDebt();
@@ -21,5 +23,9 @@ items : Item[];
   getDebt():void{
     this.DebtServiceService.getDebt().subscribe((res) => this.items = res);
     
+  }
+  
+  gotoDetail(): void {
+    this.router.navigate(['/debtDetail']);
   }
 }

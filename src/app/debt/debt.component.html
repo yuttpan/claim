@@ -21,7 +21,9 @@
       <th>#</th>
       <th>รหัสสิทธิ</th>
       <th>สิทธิ</th>
-      <th>ลูกหนี้</th>
+      <th>รหัสสิทธิหลัก</th>
+      <th>สิทธิหลัก</th>
+
       <th>#</th>
     </tr>
   </thead>
@@ -30,8 +32,9 @@
       <th scope="row">{{i + 1}}</th>
       <td>{{item.pttype}}</td>
       <td>{{item.name}}</td>
-      <td>{{item.debt_id}}</td>
-      <td><button>แก้ไข</button></td>
+      <td>{{item.ksn_debt_id}}</td>
+      <td>{{item.pttype_main}}</td>
+      <td><button (click)="gotoDetail()">แก้ไข</button></td>
     </tr>
   </tbody>
 </table>
