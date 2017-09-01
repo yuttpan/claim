@@ -14,6 +14,8 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { SettingComponent } from './setting/setting.component';
 import { PttypeService } from "./pttype.service";
 import { PttypeComponent } from './pttype/pttype.component';
+import { DebtServiceService } from "./debt-service.service";
+import { DebtComponent } from './debt/debt.component';
 
 @NgModule({
   imports: [
@@ -26,9 +28,10 @@ import { PttypeComponent } from './pttype/pttype.component';
     EclaimComponent,
     SettingComponent,
     PttypeComponent,
+    DebtComponent,
   ],
  
-  providers: [PttypeService],
+  providers: [PttypeService,DebtServiceService],
   bootstrap: [AppComponent],
   
 })

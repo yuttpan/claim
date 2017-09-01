@@ -1,0 +1,38 @@
+<p>
+  debt works!
+</p>
+<div class="container">
+  
+
+<div class="jumbotron" >
+  <h1 class="display-3">Jumbo heading</h1>
+  <p class="lead">Jumbo helper text</p>
+  <hr class="my-2">
+  <p>More info</p>
+  <p class="lead">
+      
+  
+  </p>
+  
+</div>
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>รหัสสิทธิ</th>
+      <th>สิทธิ</th>
+      <th>ลูกหนี้</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items; let i=index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{item.pttype}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.debt_id}}</td>
+      <td><button>แก้ไข</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
