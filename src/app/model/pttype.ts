@@ -1,5 +1,5 @@
 export class Pttype {
- id: string;
+ pttype:string;
     name: string;
     debt_name : string;
   }

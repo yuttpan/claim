@@ -18,4 +18,9 @@ export class DebtServiceService {
     .map((res) => <Item[]> res.json());
   }
 
+  getdebteDetail(pttype:string):Observable<Item[]>{
+    return this.http.get('http://118.175.76.244/api/pttype_detail.php?pttype='+pttype)
+    .map((res) => <Item[]> res.json());
+  }
+
 }
