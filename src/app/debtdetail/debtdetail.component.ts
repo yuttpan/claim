@@ -14,6 +14,10 @@ export class DebtdetailComponent implements OnInit {
   private parm: any;
   private items:Item[];
   //public userId:string;
+  private  myModel = {
+    username: 'poweruser'
+  }
+
   constructor(private Route: ActivatedRoute,public DebtServiceService: DebtServiceService) { }
 
   ngOnInit() {
