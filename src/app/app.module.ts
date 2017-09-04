@@ -18,9 +18,10 @@ import { DebtServiceService } from "./debt-service.service";
 import { DebtComponent } from './debt/debt.component';
 import { DebtdetailComponent } from './debtdetail/debtdetail.component';
 
+
 @NgModule({
   imports: [
-    BrowserModule,HttpModule, HttpClientModule,AppRoutingModule, FormsModule,
+    BrowserModule,HttpModule, HttpClientModule,AppRoutingModule, FormsModule
     
   ],
   declarations: [
