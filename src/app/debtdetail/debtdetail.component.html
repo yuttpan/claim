@@ -16,20 +16,22 @@
     </ul>
   </div>
 </div>
-
-<div class="form-group has-success">
-  <label class="form-control-label" for="inputSuccess1">Input with success</label>
-  
-  <select class="custom-select"  [(ngModel)]="name">
-    <option selected >Open this select menu</option>
+<form [formGroup]="loginForm" (ngSubmit)="Adddebt($event)">
+  <div class="form-group has-success">
+  <select class="custom-select"  formControlName="pttypeMain" >
     <option value="{{item.pttype_money_id}}" *ngFor="let item of pttypemain">{{item.pttype_money_name}}</option>
   </select>
-<button type="button" name="" id="" class="btn btn-danger "(click)="Adddebt(name)">บันทึก</button>
-</div>
 
-{{name}}
-</div>
+ 
+  <button type="submit">บันทึก</button>
+  </div>
 
+
+</form>
+
+ 
+  
+ </div>
 
 
 

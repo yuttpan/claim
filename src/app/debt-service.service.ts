@@ -31,12 +31,13 @@ export class DebtServiceService {
     return this.http.get('http://118.175.76.244/api/pttypemain.php')
       .map((res) => <pttypeMain[]>res.json());
   }
-  /*public Adddebt(name: string): Observable<Feedback> {
+  public Adddebt(pttype: string,pttypemain:string): Observable<Feedback> {
 
     let myHeader = new Headers();
     myHeader.append('Content-Type', 'application/json');
     let data = {
-      'name': name
+      'pttype': name,
+      'pttypemain': pttypemain
     }
 
     return this.http.post('http://118.175.76.244/api/update_pttype.php', data, { headers: myHeader })
@@ -44,11 +45,9 @@ export class DebtServiceService {
         let data = res.json();
         return data;
       }).catch(this.handleError);
-  }*/
-
-  public Adddebt(name):void{
-    console.log(name)
   }
+
+ 
 
   private handleError(error:any){
     return Observable.throw(error.json().errorMessage || 'Server เกิดข้อผิดพลาด');
