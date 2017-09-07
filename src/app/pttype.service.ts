@@ -7,10 +7,10 @@ import { Pttype } from "./model/pttype";
 @Injectable()
 export class PttypeService {
   private headers = new Headers({'Content-Type': 'application/json'});
-  private apiUrl = 'http://118.175.76.244/api/pttype.php';  // URL to web api
+  private apiUrl = 'http://118.175.76.244/buayai_api/pttype.php';  // URL to web api
   constructor(private http: Http) { }
   getpttype() {
-    return this.http.get(`http://118.175.76.244/api/pttype.php`)
+    return this.http.get(`http://118.175.76.244/buayai_api/pttype.php`)
     .map((res:Response) => res.json());
   }
   

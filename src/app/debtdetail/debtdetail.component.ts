@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router';
-import { FormBuilder, Validators } from '@angular/forms';
+//import { FormBuilder, Validators } from '@angular/forms';
 
 import { DebtServiceService } from "../debt-service.service";
 import { Item } from "../model/item";
 import { pttypeMain } from "../model/itemdata";
+import { Feedback } from "../model/feedback";
 
 @Component({
   selector: 'app-debtdetail',
@@ -20,16 +21,11 @@ export class DebtdetailComponent implements OnInit {
   public items:Item[];
   public pttypemain : pttypeMain[] ;
   //public pt :string ;
-  public loginForm = this.fb.group({
-    pttypeMain: ["", Validators.required],
-  //  pt: ["", Validators.required],
-    email : ["", Validators.required],
-    password : ["", Validators.required],
-  });
+  public ptmain:string ;
 public data : any ;
+public feedback : Feedback;
 
-
-  constructor(private Route: ActivatedRoute,public DebtServiceService: DebtServiceService,public fb:FormBuilder,) { }
+  constructor(private Route: ActivatedRoute,public DebtServiceService: DebtServiceService,) { }
 
   ngOnInit() {
     this.Route.params.subscribe((params: Params) => {
@@ -42,14 +38,15 @@ public data : any ;
     
   }
   
-  Adddebt():void {
-    console.log(event);
-    console.log(this.loginForm.value);
-    this.data = {
-        'pt' : this.pttype
-       // 'pttypemain' : this.loginForm.value
-    }
-  
+  Adddebt(ptmain):void {
+   
+      let pttype =this.pttype ;
+     //let ptmain = this.ptmain ;
+    
+    this.DebtServiceService.Adddebt(pttype,ptmain).subscribe((res) => this.feedback = res);
+   //console.log(this.feedback);
+  console.log(ptmain);
+  console.log(this.pttype);
 
   }
 
