@@ -26,7 +26,8 @@ export class DebtdetailComponent implements OnInit {
 public data : any ;
 public feedback : Feedback[];
 
-  constructor(private Route: ActivatedRoute,public DebtServiceService: DebtServiceService,) { }
+  constructor(private Route: ActivatedRoute,public DebtServiceService: DebtServiceService, private router: Router) { }
+
 
   ngOnInit() {
     this.Route.params.subscribe((params: Params) => {
@@ -45,7 +46,11 @@ public feedback : Feedback[];
      //let ptmain = this.ptmain ;
     
     this.DebtServiceService.Adddebt(ptmain,pttypes).subscribe(
-      (data) => console.log(data),
+      (data) => {
+          this.data = data
+          console.log(this.data);
+          this.router.navigate(['/setting']);
+      },
       (error) => console.log(error)
 
       
