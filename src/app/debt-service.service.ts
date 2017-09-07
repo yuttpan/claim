@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
-import { FormGroup,FormBuilder,FormControl }   from '@angular/forms';
+import { Http,Response, Headers, RequestOptions } from '@angular/http';
+
 
 
 import { Observable } from 'rxjs/Observable';
@@ -33,23 +33,13 @@ public feedback : Feedback ;
   }
   
 
-  Adddebt(pttype:string,ptmain:string):Observable<Feedback> {
-    let myHeader = new Headers();
-    myHeader.append('Content-Type','application/json');
+  Adddebt(ptmain:string,pttype:string) {
 
-    let body = {
-      'pttype': pttype,
-      'ptmain': ptmain
-    }
-    return this.http.post('http://118.175.76.244/buayai_api/update_pttype.php', body, myHeader)
-    .map((res:Response) => <Feedback[]> res.json())
-    .catch(this.handleError);
+   return this.http.post('http://118.175.76.244/buayai_api/update_pttype.php',{pt:ptmain,pttype:pttype}).map(res =>res.json());
   }
+    
+  
  
-  private handleError(error:any){
-    return Observable.throw(error.json().errorMessage || 'Server เกิดข้อผิดพลาด');
-  }
-
 
 
 }

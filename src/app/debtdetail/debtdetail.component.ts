@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router';
 //import { FormBuilder, Validators } from '@angular/forms';
-
+import { Observable } from 'rxjs';
 import { DebtServiceService } from "../debt-service.service";
 import { Item } from "../model/item";
 import { pttypeMain } from "../model/itemdata";
 import { Feedback } from "../model/feedback";
+import { DebtComponent } from "../debt/debt.component";
 
 @Component({
   selector: 'app-debtdetail',
@@ -23,7 +24,7 @@ export class DebtdetailComponent implements OnInit {
   //public pt :string ;
   public ptmain:string ;
 public data : any ;
-public feedback : Feedback;
+public feedback : Feedback[];
 
   constructor(private Route: ActivatedRoute,public DebtServiceService: DebtServiceService,) { }
 
@@ -40,13 +41,16 @@ public feedback : Feedback;
   
   Adddebt(ptmain):void {
    
-      let pttype =this.pttype ;
+      let pttypes =this.pttype ;
      //let ptmain = this.ptmain ;
     
-    this.DebtServiceService.Adddebt(pttype,ptmain).subscribe((res) => this.feedback = res);
-   //console.log(this.feedback);
-  console.log(ptmain);
-  console.log(this.pttype);
+    this.DebtServiceService.Adddebt(ptmain,pttypes).subscribe(
+      (data) => console.log(data),
+      (error) => console.log(error)
+
+      
+    )
+   
 
   }
 
