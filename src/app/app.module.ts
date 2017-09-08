@@ -14,10 +14,13 @@ import { EclaimComponent } from './eclaim/eclaim.component';
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { SettingComponent } from './setting/setting.component';
 import { PttypeService } from "./pttype.service";
-import { PttypeComponent } from './pttype/pttype.component';
+
 import { DebtServiceService } from "./debt-service.service";
 import { DebtComponent } from './debt/debt.component';
 import { DebtdetailComponent } from './debtdetail/debtdetail.component';
+import { DebtorComponent } from './debtor/debtor.component';
+import { DebtorService } from "./service/deb-service/debtor.service";
+
 
 
 @NgModule({
@@ -30,12 +33,13 @@ import { DebtdetailComponent } from './debtdetail/debtdetail.component';
     MainComponent,
     EclaimComponent,
     SettingComponent,
-    PttypeComponent,
+
     DebtComponent,
     DebtdetailComponent,
+    DebtorComponent,
   ],
  
-  providers: [PttypeService,DebtServiceService],
+  providers: [PttypeService,DebtServiceService,DebtorService],
   bootstrap: [AppComponent],
   
 })

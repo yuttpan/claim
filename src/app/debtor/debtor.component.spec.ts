@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PttypeComponent } from './pttype.component';
+import { DebtorComponent } from './debtor.component';
 
-describe('PttypeComponent', () => {
-  let component: PttypeComponent;
-  let fixture: ComponentFixture<PttypeComponent>;
+describe('DebtorComponent', () => {
+  let component: DebtorComponent;
+  let fixture: ComponentFixture<DebtorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PttypeComponent ]
+      declarations: [ DebtorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PttypeComponent);
+    fixture = TestBed.createComponent(DebtorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,10 +7,10 @@ import { AppComponent } from "../app.component";
 import { MainComponent } from "../main/main.component";
 import { EclaimComponent } from "../eclaim/eclaim.component";
 import { SettingComponent } from "../setting/setting.component";
-import { PttypeComponent } from "../pttype/pttype.component";
+
 import { DebtComponent } from "../debt/debt.component";
 import { DebtdetailComponent } from "../debtdetail/debtdetail.component";
-
+import {DebtorComponent  } from "../debtor/debtor.component";
 //import { Routes, RouterModule } from '@angular/router'
 
 const routes: Routes = [
@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'main',  component: MainComponent },
   { path: 'eclaim', component: EclaimComponent },
   { path: 'setting', component: DebtComponent },
-  { path: 'debtDetail/:pttype', component: DebtdetailComponent }
+  { path: 'debtDetail/:pttype', component: DebtdetailComponent },
+  {path: 'debtor',component : DebtorComponent}
 ];
 @NgModule({
   

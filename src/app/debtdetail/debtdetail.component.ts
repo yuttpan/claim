@@ -48,8 +48,12 @@ public feedback : Feedback[];
     this.DebtServiceService.Adddebt(ptmain,pttypes).subscribe(
       (data) => {
           this.data = data
-          console.log(this.data);
-          this.router.navigate(['/setting']);
+          if (data.status=='ok'){
+            alert(data.message);
+            this.router.navigate(['/setting']);
+          }
+          
+         
       },
       (error) => console.log(error)
 
