@@ -1,0 +1,25 @@
+<div class="container-fluid" align="center" >
+  
+
+<div class="card" >
+ <div class="card-header bg-success text-white" >
+   จับคู่สิทธิการรักษากับสิทธิหลัก
+ </div>
+ <div class="card-block"  >
+   <ul class="list-group list-group-flush"  *ngFor="let item of debtordetail">
+     <li class="list-group-item">  รหัสสิทธ  : {{item.debt_code}}</li>
+     <li class="list-group-item">  ชื่อสิทธิ   : {{item.debt_name}} </li>
+     <li class="list-group-item">  รหัสสิทธิบัญชี :{{item.debt_id}} </li>
+     <li class="list-group-item">  สิทธิบัญชี  :{{item.rightname}}</li>
+   </ul>
+ </div>
+
+ <div class="form-group has-success">
+  <select class="custom-select" [(ngModel)]="ptmain" >
+    <option value="{{item.right_code}}" *ngFor="let item of pttypemain">{{item.right_name}}</option>
+  </select>
+
+ 
+  <button   >บันทึก</button>
+  </div>
+</div>

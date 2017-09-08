@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DebtorService } from "../service/deb-service/debtor.service";
 import { Debtor } from "../model/debtor";
+import { DebtordetailComponent } from "../debtordetail/debtordetail.component";
 
 
 @Component({

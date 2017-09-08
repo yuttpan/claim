@@ -20,6 +20,7 @@ import { DebtComponent } from './debt/debt.component';
 import { DebtdetailComponent } from './debtdetail/debtdetail.component';
 import { DebtorComponent } from './debtor/debtor.component';
 import { DebtorService } from "./service/deb-service/debtor.service";
+import { DebtordetailComponent } from './debtordetail/debtordetail.component';
 
 
 
@@ -37,6 +38,7 @@ import { DebtorService } from "./service/deb-service/debtor.service";
     DebtComponent,
     DebtdetailComponent,
     DebtorComponent,
+    DebtordetailComponent,
   ],
  
   providers: [PttypeService,DebtServiceService,DebtorService],

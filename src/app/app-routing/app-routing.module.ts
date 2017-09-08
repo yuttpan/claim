@@ -11,6 +11,7 @@ import { SettingComponent } from "../setting/setting.component";
 import { DebtComponent } from "../debt/debt.component";
 import { DebtdetailComponent } from "../debtdetail/debtdetail.component";
 import {DebtorComponent  } from "../debtor/debtor.component";
+import { DebtordetailComponent } from "../debtordetail/debtordetail.component";
 //import { Routes, RouterModule } from '@angular/router'
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'eclaim', component: EclaimComponent },
   { path: 'setting', component: DebtComponent },
   { path: 'debtDetail/:pttype', component: DebtdetailComponent },
-  {path: 'debtor',component : DebtorComponent}
+  {path: 'debtor',component : DebtorComponent},
+  {path: 'debtorDetail/:id',component : DebtordetailComponent}
 ];
 @NgModule({
   
