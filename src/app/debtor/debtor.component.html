@@ -3,7 +3,7 @@
   
 
 <div class="jumbotron" >
-  <h3 class="display-4">รายการจับคู่สิทธิ Hosxp กับสิทธิหลัก</h3>
+  <h3 class="display-4">รายการลูกหนี้ตามผังบัญชี </h3>
   
   
 
@@ -13,8 +13,8 @@
   <thead class="thead-inverse">
     <tr>
       <th>#</th>
-      <th>รหัสสิทธิ</th>
-      <th>สิทธิ</th>
+      <th>รหัสบัญชี</th>
+      <th>ชื่อบัญชี</th>
       <th>รหัสสิทธิหลัก</th>
       <th>สิทธิหลัก</th>
 
@@ -24,7 +24,7 @@
   <tbody>
     <tr *ngFor="let item of debtor; let i=index">
       <th scope="row">{{i + 1}}</th>
-      <td><a [routerLink]="['/debtDetail',item.pttype]"> {{item.debt_code}}</a></td>
+      <td><a [routerLink]="['/debtDetail',item.debt_code]"> {{item.debt_code}}</a></td>
       <td>{{item.debt_name}}</td>
       <td>{{item.debt_id}}</td>
       <td>{{item.pttypemain}}</td>

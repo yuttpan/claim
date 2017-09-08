@@ -3,7 +3,7 @@ export class Item {
         public pttype : string,
  public name : string ,
  public ksn_debt_id:  string,
- public pttype_main: string,
+ public rightname : string,
  
      ){}
 }
