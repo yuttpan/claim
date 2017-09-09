@@ -27,5 +27,9 @@ export class DebtorService {
     return this.http.get('http://118.175.76.244/buayai_api/pttypemain.php')
       .map((res) => <pttypeMain[]>res.json());
   }
+  Adddebt(ptmain:string,pttype:string) {
+    
+       return this.http.post('http://118.175.76.244/buayai_api/update_debt.php',{pt:ptmain,pttype:pttype}).map(res =>res.json());
+      }
 
 }
