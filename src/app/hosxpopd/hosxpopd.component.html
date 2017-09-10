@@ -1,0 +1,47 @@
+<div class="container" style="padding: 50px 5px 10px 5px ">
+
+    <div class="card">
+        <div class="card-header "  class="bg-primary text-white">
+          
+        </div>
+        <div class="card-block" >
+          <h4 class="card-title">รายงานลูกหนี้โปรแกรม Hosxp</h4>
+
+
+    
+    <form class="form-inline">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">จากวันที่</label>
+      <input type="date" name="" id="" #bdate>
+
+      <label class="mr-sm-2" for="inlineFormCustomSelect">ถึงวันที่</label>
+      <input type="date" name="" id="" #edate>
+      <button  class="btn btn-primary" (click)="postdata(bdate,edate)">Submit</button>
+    </form>
+  </div>
+  <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>#</th>
+          <th>รหัสบัญชี</th>
+          <th>ชื่อบัญชี</th>
+          <th>จำนวนครั้ง</th>
+          <th>จำนวนคน</th>
+          <th>จำนวนเงิน</th>
+    
+          <th>#</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of opdhos; let i=index">
+          <th scope="row">{{i + 1}}</th>
+          <td> {{item.debt_code}}</td>
+          <td>{{item.debt_name}}</td>
+          
+          <td>{{item.vn}}</td>
+          <td>{{item.hn}}</td>  
+          <td style = "text-align: right">{{item.income | number  : '1.2-2'}}</td>  
+         
+        </tr>
+      </tbody>
+    </table>
+</div>

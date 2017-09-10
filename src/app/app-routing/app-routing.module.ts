@@ -12,6 +12,7 @@ import { DebtComponent } from "../debt/debt.component";
 import { DebtdetailComponent } from "../debtdetail/debtdetail.component";
 import {DebtorComponent  } from "../debtor/debtor.component";
 import { DebtordetailComponent } from "../debtordetail/debtordetail.component";
+import { HosxpopdComponent } from "../hosxpopd/hosxpopd.component";
 //import { Routes, RouterModule } from '@angular/router'
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'setting', component: DebtComponent },
   { path: 'debtDetail/:pttype', component: DebtdetailComponent },
   {path: 'debtor',component : DebtorComponent},
-  {path: 'debtorDetail/:id',component : DebtordetailComponent}
+  {path: 'debtorDetail/:id',component : DebtordetailComponent},
+  {path: 'hosxpopd',component : HosxpopdComponent}
 ];
 @NgModule({
   

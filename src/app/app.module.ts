@@ -6,22 +6,23 @@ import { FormsModule,NgModel }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
-
+//inport component
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { EclaimComponent } from './eclaim/eclaim.component';
-
-import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { SettingComponent } from './setting/setting.component';
 import { PttypeService } from "./pttype.service";
-
-import { DebtServiceService } from "./debt-service.service";
 import { DebtComponent } from './debt/debt.component';
 import { DebtdetailComponent } from './debtdetail/debtdetail.component';
 import { DebtorComponent } from './debtor/debtor.component';
-import { DebtorService } from "./service/deb-service/debtor.service";
 import { DebtordetailComponent } from './debtordetail/debtordetail.component';
-
+import { HosxpopdComponent } from './hosxpopd/hosxpopd.component';
+//import routing
+import { AppRoutingModule } from "./app-routing/app-routing.module";
+//import Serviceprovider
+import { DebtServiceService } from "./debt-service.service";
+import { DebtorService } from "./service/deb-service/debtor.service";
+import { HosxpService } from "./service/hosxp-service/hosxp.service";
 
 
 @NgModule({
@@ -39,9 +40,10 @@ import { DebtordetailComponent } from './debtordetail/debtordetail.component';
     DebtdetailComponent,
     DebtorComponent,
     DebtordetailComponent,
+    HosxpopdComponent,
   ],
  
-  providers: [PttypeService,DebtServiceService,DebtorService],
+  providers: [PttypeService,DebtServiceService,DebtorService,HosxpService],
   bootstrap: [AppComponent],
   
 })
