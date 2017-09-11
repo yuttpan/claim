@@ -18,7 +18,8 @@
       <button  class="btn btn-primary" (click)="postdata(bdate,edate)">Submit</button>
     </form>
   </div>
-  <table class="table">
+  
+  <table class="table ">
       <thead class="thead-inverse">
         <tr>
           <th>#</th>
@@ -26,9 +27,10 @@
           <th>ชื่อบัญชี</th>
           <th>จำนวนครั้ง</th>
           <th>จำนวนคน</th>
-          <th>จำนวนเงิน</th>
+          <th>ค่าใช้จ่าย</th>
     
-          <th>#</th>
+          <th>ชำระเงิน</th>
+          <th>ลูกหนี้</th>
         </tr>
       </thead>
       <tbody>
@@ -40,6 +42,8 @@
           <td>{{item.vn}}</td>
           <td>{{item.hn}}</td>  
           <td style = "text-align: right">{{item.income | number  : '1.2-2'}}</td>  
+          <td style = "text-align: right">{{item.paid_money | number  : '1.2-2'}}</td> 
+          <td style = "text-align: right">{{item.debt_money | number  : '1.2-2'}}</td> 
          
         </tr>
       </tbody>
