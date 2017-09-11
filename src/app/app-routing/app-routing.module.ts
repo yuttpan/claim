@@ -7,6 +7,7 @@ import { AppComponent } from "../app.component";
 import { MainComponent } from "../main/main.component";
 import { EclaimComponent } from "../eclaim/eclaim.component";
 import { SettingComponent } from "../setting/setting.component";
+import { OpdhosDetailComponent } from "../opdhos-detail/opdhos-detail.component";
 
 import { DebtComponent } from "../debt/debt.component";
 import { DebtdetailComponent } from "../debtdetail/debtdetail.component";
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'debtDetail/:pttype', component: DebtdetailComponent },
   {path: 'debtor',component : DebtorComponent},
   {path: 'debtorDetail/:id',component : DebtordetailComponent},
-  {path: 'hosxpopd',component : HosxpopdComponent}
+  {path: 'hosxpopd',component : HosxpopdComponent},
+  {path: 'hosdetail/:debt_code/:debt_id/:date1/:date2',component : OpdhosDetailComponent}
 ];
 @NgModule({
   

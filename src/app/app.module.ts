@@ -23,6 +23,7 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { DebtServiceService } from "./debt-service.service";
 import { DebtorService } from "./service/deb-service/debtor.service";
 import { HosxpService } from "./service/hosxp-service/hosxp.service";
+import { OpdhosDetailComponent } from './opdhos-detail/opdhos-detail.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { HosxpService } from "./service/hosxp-service/hosxp.service";
     DebtorComponent,
     DebtordetailComponent,
     HosxpopdComponent,
+    OpdhosDetailComponent,
   ],
  
   providers: [PttypeService,DebtServiceService,DebtorService,HosxpService],
