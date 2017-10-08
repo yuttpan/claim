@@ -25,7 +25,7 @@ import { DebtorService } from "./service/deb-service/debtor.service";
 import { HosxpService } from "./service/hosxp-service/hosxp.service";
 import { OpdhosDetailComponent } from './opdhos-detail/opdhos-detail.component';
 
-
+ 
 @NgModule({
   imports: [
     BrowserModule,HttpModule, HttpClientModule,AppRoutingModule, FormsModule, ReactiveFormsModule,
